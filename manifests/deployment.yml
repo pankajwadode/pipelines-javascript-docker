@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: pankajwadodepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pankajwadodepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: pankajwadodepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: pankajwadodepipelinesjavascriptdocker 
+          image: studycontainerregistry.azurecr.io/pankajwadodepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
